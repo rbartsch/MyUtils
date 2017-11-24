@@ -1,6 +1,11 @@
-﻿using UnityEngine;
+﻿/* My implementation of Amit Patel's resource for 
+*  dice rolling and probabilities http://www.redblobgames.com/articles/probability/damage-rolls.html
+*  It is intended for the Unity game engine (using its Random) however it can be used outside of
+* Unity by replacing Unity's random with the .NET random and Mathf with .NET's Math.
+*/
 
-// http://www.redblobgames.com/articles/probability/damage-rolls.html
+using UnityEngine;
+
 public static class Dice {
 	/// <summary>
 	/// Basic roll. Scale is from 1 to x
