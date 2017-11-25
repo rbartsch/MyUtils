@@ -1,4 +1,5 @@
 ﻿// For use with Unity game engine. Attach to a game object with a LineRenderer component
+// An implementation for C# using Unity's LineRenderer adapted from this OpenGL implementation: http://slabode.exofire.net/circle_draw.shtml
 
 using UnityEngine;
 
