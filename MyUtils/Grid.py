@@ -8,7 +8,10 @@ class Grid(object):
 
     # Get the tile at given coordinates
     def get_tile(self, x, y):
-        return self.grid[x][y]
+        if (x < 0 or y < 0) or (x > len(self.grid) or y > len(self.grid[0])):
+            return -1
+        else:
+            return self.grid[x][y]
 
     # Set the tile's value at given coordinates
     def set_tile(self, x, y, v):
