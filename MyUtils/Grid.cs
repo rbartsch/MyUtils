@@ -1,5 +1,5 @@
 /// <summary>
-/// Simple and extendible 2D grid for games or other representions.
+/// Simple and extensible 2D grid for games or other representations.
 /// </summary>
 public class Grid {
     private int[,] grid;
