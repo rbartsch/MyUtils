@@ -126,6 +126,7 @@ public class Grid {
             for (int x = 0; x <= b0; x++) {
                 sb.Append(layers[l][x, y]);
             }
+            
             if (y != b1) {
                 sb.Append("\n");
             }
@@ -157,10 +158,12 @@ public class Grid {
                     sb.Append("?");
                 }
             }
+            
             if (y != b1) {
                 sb.Append("\n");
             }
         }
+        
         return sb.ToString();
     }
 }
