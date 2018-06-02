@@ -38,7 +38,7 @@ public class Grid {
         layers.Add(layers.Count, new int[w, h]);
     }
 
-    
+
     /// <summary>
     /// Add an array of symbols that correspond to the grid tile values
     /// in ascending order starting from 0. i.e grid tile value 0 = s[0]
@@ -55,6 +55,7 @@ public class Grid {
     /// </summary>
     /// <param name="x">x coordinate</param>
     /// <param name="y">y coordinate</param>
+    /// <param name="l">layer to get from</param>
     /// <returns></returns>
     public int GetTile(int x, int y, int l = 0) {
         if (l < 0 || l > layers.Count) {
@@ -76,6 +77,7 @@ public class Grid {
     /// <param name="x">x coordinate</param>
     /// <param name="y">y coordinate</param>
     /// <param name="v">tile value</param>
+    /// <param name="l">layer to set for</param>
     /// <returns></returns>
     public bool SetTile(int x, int y, int v, int l = 0) {
         if(l < 0 || l > layers.Count) {
@@ -95,6 +97,7 @@ public class Grid {
     /// <summary>
     /// Gets a grid layout of the numerical tile values
     /// </summary>
+    /// <param name="l">layer to get layout of</param>
     /// <returns>string</returns>
     public string GetLayoutRaw(int l = 0) {
         if (l < 0 || l > layers.Count) {
@@ -120,7 +123,8 @@ public class Grid {
     /// <summary>
     /// Gets a grid layout of the symbols mapped to the numerical tile values
     /// </summary>
-    /// <returns></returns>
+    /// <param name="l">layer to get layout of</param>
+    /// <returns>string</returns>
     public string GetLayoutFormatted(int l = 0) {
         if (l < 0 || l > layers.Count) {
             return "Unknown layer";
