@@ -38,7 +38,7 @@ public class Grid {
         layers.Add(layers.Count, new int[w, h]);
     }
 
-    // TODO(rbartsch): Remove add handle symbols/textures in world grid
+    
     /// <summary>
     /// Add an array of symbols that correspond to the grid tile values
     /// in ascending order starting from 0. i.e grid tile value 0 = s[0]
@@ -117,7 +117,6 @@ public class Grid {
     }
 
 
-    // TODO(rbartsch): Remove add handle symbols/textures in world grid
     /// <summary>
     /// Gets a grid layout of the symbols mapped to the numerical tile values
     /// </summary>
