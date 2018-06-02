@@ -14,7 +14,7 @@ public class Grid {
 
     /// <summary>
     /// Create 2D grid with given width and height, always starts
-    /// with a base layer at 0 automatically.
+    /// with a base layer at 0 automatically
     /// </summary>
     /// <param name="w">width</param>
     /// <param name="h">height</param>
@@ -126,7 +126,7 @@ public class Grid {
     /// <param name="l">layer to get layout of</param>
     /// <returns>string</returns>
     public string GetLayoutFormatted(int l = 0) {
-        if (l < 0 || l > layers.Count) {
+        if (l < 0 || l > layers.Count || !layersSymbols.ContainsKey(l)) {
             return "Unknown layer";
         }
 
