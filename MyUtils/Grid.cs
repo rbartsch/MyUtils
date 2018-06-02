@@ -1,5 +1,5 @@
 /// <summary>
-/// Simple and extendible 2D grid for games or other representions.
+/// Simple and extensible 2D grid for games or other representations.
 /// Always has a base layer that starts at 0, layers are above.
 /// Base layer can represent the "floor" including walls, 
 /// while above layers which replicate the size of the base layer
