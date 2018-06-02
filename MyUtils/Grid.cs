@@ -12,7 +12,6 @@ public class Grid {
     private readonly int w;
     private readonly int h;
 
-
     /// <summary>
     /// Create 2D grid with given width and height, always starts
     /// with a base layer at 0 automatically.
