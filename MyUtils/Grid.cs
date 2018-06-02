@@ -92,6 +92,21 @@ public class Grid {
             return true;
         }
     }
+    
+    
+    /// <summary>
+    /// Gets a copy of the grid values
+    /// </summary>
+    /// <param name="l">layer to get from</param>
+    /// <returns>2D array of integers</returns>
+    public int[,] GetCopyOfGridValues(int l) {
+        if(l < 0 || l > layers.Count) {
+            throw new IndexOutOfRangeException("Invalid layer");
+        }
+        
+        int[,] grid = layers[l].Clone() as int[,];
+        return grid;
+    }
 
 
     /// <summary>
@@ -101,7 +116,7 @@ public class Grid {
     /// <returns>string</returns>
     public string GetLayoutRaw(int l = 0) {
         if (l < 0 || l > layers.Count) {
-            return "Unknown layer";
+            return "Invalid layer";
         }
 
         StringBuilder sb = new StringBuilder();
@@ -127,7 +142,7 @@ public class Grid {
     /// <returns>string</returns>
     public string GetLayoutFormatted(int l = 0) {
         if (l < 0 || l > layers.Count || !layersSymbols.ContainsKey(l)) {
-            return "Unknown layer";
+            return "Invalid layer";
         }
 
         StringBuilder sb = new StringBuilder();
