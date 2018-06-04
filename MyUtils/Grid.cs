@@ -93,6 +93,34 @@ public class Grid {
         }
     }
     
+    /// <summary>
+    /// Gets coordinates of the four directional neighbours only, no diagonals. 
+    /// Does not check if the neighbours are out of bounds, it will return either
+    /// -1 or > grid bounds, just checks the raw grid. It will check if the origin 
+    /// is in bounds.
+    /// </summary>
+    /// <param name="x">x coordinate (origin) to check neighbours from</param>
+    /// <param name="y">y coordinate (origin) to check neighbours from</param>
+    /// <param name="l">the layer to check on</param>
+    /// <returns></returns>
+    public int[][] GetNeighbours(int x, int y, int l = 0) {
+        if (l < 0 || l > layers.Count) {
+            return new int[4][];
+        }
+
+        if ((x < 0 || y < 0) || (x > layers[l].GetUpperBound(0) || y > layers[l].GetUpperBound(1))) {
+            return new int[4][];
+        }
+        else {
+            int[][] neighbours = new int[4][];
+            
+            neighbours[0] = new int[2] { x, y - 1 };
+            neighbours[1] = new int[2] { x + 1, y };
+            neighbours[2] = new int[2] { x, y + 1 };
+            neighbours[3] = new int[2] { x - 1, y };
+            return neighbours;
+        }
+    }
     
     /// <summary>
     /// Gets a copy of the grid values
