@@ -102,7 +102,7 @@ public class Grid {
     /// <param name="x">x coordinate (origin) to check neighbours from</param>
     /// <param name="y">y coordinate (origin) to check neighbours from</param>
     /// <param name="l">the layer to check on</param>
-    /// <returns></returns>
+    /// <returns>jagged array containing the four neighbour's coords</returns>
     public int[][] GetNeighbours(int x, int y, int l = 0) {
         if (l < 0 || l > layers.Count) {
             return new int[4][];
