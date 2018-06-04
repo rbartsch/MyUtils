@@ -3,7 +3,7 @@
 /// Always has a base layer that starts at 0, layers are above.
 /// Base layer can represent the "floor" including walls, 
 /// while above layers which replicate the size of the base layer
-/// can represent enemies and anything else.
+/// can represent things you do not want on the base layer.
 /// </summary>
 public class Grid {
     private Dictionary<int, int[,]> layers = new Dictionary<int, int[,]>();
@@ -93,6 +93,7 @@ public class Grid {
         }
     }
     
+    
     /// <summary>
     /// Gets coordinates of the four directional neighbours only, no diagonals. 
     /// Returns -1 if neighbour is out of bounds or if the origin is out of bounds
@@ -136,6 +137,7 @@ public class Grid {
         }
     }
     
+    
     /// <summary>
     /// Gets a copy of the grid values
     /// </summary>
@@ -149,8 +151,8 @@ public class Grid {
         int[,] grid = layers[l].Clone() as int[,];
         return grid;
     }
-
-
+    
+    
     /// <summary>
     /// Gets a grid layout of the numerical tile values
     /// </summary>
@@ -176,8 +178,8 @@ public class Grid {
 
         return sb.ToString();
     }
-
-
+    
+    
     /// <summary>
     /// Gets a grid layout of the symbols mapped to the numerical tile values
     /// </summary>
